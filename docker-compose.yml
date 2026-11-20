@@ -462,16 +462,16 @@ services:
      REMOVE_STALLED: True
      REMOVE_UNMONITORED: True
      SEARCH_MISSING: |
-       min_days_between_searches: 7
-       max_concurrent_searches: 3
+       min_days_between_searches: 1
+       max_concurrent_searches: 5
      # Feature Settings
      MAX_STRIKES: 3
      PROTECTED_TAG: Don't Kill
-     MIN_SPEED: 100     
+     MIN_SPEED: 50     
      REMOVE_FAILED_IMPORTS: |
        message_patterns:
-        - "Not a Custom Format upgrade for existing"
-        - "Not an upgrade for existing"
+        - "Not a Custom Format upgrade for existing*"
+        - "Not an upgrade for existing*"
      ## Radarr
      RADARR: >
         - base_url: "http://radarr:7878"
